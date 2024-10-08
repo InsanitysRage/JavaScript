@@ -1,0 +1,6 @@
+var localVar = 20;
+
+function myFunction() {
+  console.log(localVar);
+}
+myFunction();
