@@ -1,0 +1,4 @@
+function changetitle() {
+  var heading = document.getElementById("demoheading")
+  heading.textContent = "New Title Here"
+}
