@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Event Listener Example</title>
+</head>
+
+<body>
+  <button id="myButton">Click Me!</button>
+  <script>
+    // Get the button element
+    const button = document.getElementById("myButton")
+
+    // Add event listener to the button
+    button.addEventListener("click", function () {
+      // This code will run when the button is clicked
+      alert("You clicked the Button!");
+    });
+  </script>
+
+</body>
