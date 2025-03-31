@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Indexing</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  const books = [
+    "Eragon", // Index position 0
+    "Eldest", // Index position 1
+    "Brisingr", // Index position 2
+    "Inheritance", // Index position 3
+    "Murtagh" // Index position 4
+  ];
+
+  //Calling Specific indexed items using the index number
+
+  console.log(books[0]);
+  console.log(books[1]);
+  console.log(books[2]);
+  console.log(books[3]);
+  console.log(books[4]);
+
+  // Calling the length of the Array
+
+  console.log(books.length);
+
+  // Renaming an item from the Array
+
+  books[2] = "Brisingr Limited Edition";
+  console.log(books[2]);
+
+  // Adding an item to the Array
+
+  books[books.length] = "The Witch, The Fork, and the Snake";
+  console.log(books);
+
+  books[9] = "Lord of the Rings";
+  console.log(books);
+</script>
+
+</html>

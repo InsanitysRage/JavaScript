@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>String Concantenation</title>
+</head>
+
+<body>
+  <script>
+    //User Class
+
+    class User {
+      constructor(name, age, email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+      }
+    }
+
+    const userObject = new User("Aaron", 32, "aaron@hotmail.com");
+    console.log(userObject);
+
+    const newHTML = "<h1>Hello " + userObject.name + "</h1>";
+
+    document.body.innerHTML = newHTML;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Classes</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  class Contact {
+    constructor(firstName, lastName, age, gender) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+      this.gender = gender;
+    }
+  }
+
+  const aaron = new Contact("Aaron", "Wattam", 32, "Male");
+  const kelly = new Contact("Kelly", "Nield", 31, "Female");
+
+  console.log(aaron);
+  console.log(kelly);
+
+  class Chest {
+    constructor(isOpen, coins) {
+      this.isOpen = isOpen;
+      this.coins = coins;
+    }
+    openChest() {
+      this.isOpen = true;
+      this.coins = 0;
+      console.log("Chest Opened, Collected 100 coins!" + Chest.coins);
+    }
+  }
+
+  const myChest = new Chest(false, 100);
+
+  console.log(myChest.coins);
+
+  myChest.openChest();
+
+  console.log(myChest.coins);
+</script>
+
+</html>

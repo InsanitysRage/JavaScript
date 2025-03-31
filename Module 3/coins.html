@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coins</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  const character = {
+    hairColor: "black",
+    eyeColor: "blue",
+    clothesColor: "brown",
+    goldCoins: 0,
+    isDead: false,
+    position: {
+      x: 0,
+      y: 0,
+    },
+    hasKey: false,
+    inventory: ["hat", "map"],
+  }
+
+  const chest = {
+    isOpen: false,
+    isLocked: true,
+    coins: 10,
+    inventory: ["sword", "shield"],
+    openChest: function () {
+      if (!this.isOpen) {
+        this.isOpen = true;
+        this.coins = 0;
+        /*character.goldCoins = (character.goldCoins + 10);*/
+        console.log("Chest opened! Collected 10 coins!");
+      };
+    },
+  }
+</script>
+
+</html>

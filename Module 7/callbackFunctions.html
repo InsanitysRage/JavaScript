@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callback Functions</title>
+</head>
+
+<body>
+  <script>
+    // This is an example of a callback function
+
+    function greetUser(name, callback) {
+      const greetingMessage = `Hello, ${name}!`;
+      callback(greetingMessage);
+    };
+
+    // This is the callback function that will be passed to the greetUser
+
+    function displayGreeting(message) {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode(message);
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    };
+
+    // Calling greetUser and passing the displayGreeting function as a callback
+
+    greetUser("Aaron", displayGreeting);
+
+    // Thiss function simulates an asynchronus operation (using setTimeout)
+
+    function fetchData(callback) {
+      setTimeout(() => {
+        const data = { message: "Hello, World!" };
+        callback(null, data);
+      }, 2000);
+    }
+
+    // Callback function to handle the fetched data
+
+    function handleData(error, data) {
+      if (error) {
+        console.log("Error: ", error)
+      } else {
+        console.log("Data: ", data)
+      };
+    }
+
+    // Call the fetchData function and pass the handleData function as a callback
+
+    fetchData(handleData); 
+  </script>
+</body>
+
+</html>

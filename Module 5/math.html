@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /* Arithmatic Operators
+
++ add
+- subtract
+* multiply
+/ divide*/
+
+  function addition() {
+    let a = 10;
+    let b = 5;
+
+    let sum = a + b;
+
+    console.log("addition example: " + a + "+" + b + "=" + sum);
+  }
+
+  addition();
+
+  function subtraction() {
+    let a = 68;
+    let b = 16;
+
+    let sum = a - b;
+
+    console.log("subtraction example: " + a + "-" + b + "=" + sum);
+  }
+
+  subtraction();
+
+  function multiplication() {
+    let a = 75;
+    let b = 6;
+
+    let sum = a * b;
+
+    console.log("multiplication example: " + a + "x" + b + "=" + sum);
+  }
+
+  multiplication();
+
+  function division() {
+    let a = 99;
+    let b = 3;
+
+    let sum = a / b;
+
+    console.log("division example: " + a + "/" + b + "=" + sum);
+  };
+
+  division();
+
+  function compoundExample() {
+    let a = 40;
+    console.log("A = " + a);
+    let sum = (a += 5);
+    console.log("A + 5 = " + sum);
+    console.log("New value for A is " + a);
+  }
+
+  compoundExample();
+
+  function absoluteExample() {
+    let value = -4.7;
+    let absoluteValue = Math.abs(value);
+    console.log(absoluteValue);
+  }
+
+  absoluteExample();
+
+  function roundExample() {
+    let value = 4.7;
+    let roundedValue = Math.round(value);
+    console.log(roundedValue);
+  }
+
+  roundExample();
+
+  function randomExample() {
+    randomNumber = Math.random();
+    console.log(randomNumber);
+
+  };
+
+  randomExample();
+
+  function averageExample() {
+    let samples = [4.2, 5.1, 3.8, 4.7, 5.3];
+    let sum = 0;
+
+    for (let i = 0; i < samples.length; i++) {
+      sum += samples[i];
+    }
+
+    let average = sum / samples.length;
+    console.log("The average value of the 5 samples is: " + average);
+  };
+
+  averageExample();
+</script>
+
+</html>

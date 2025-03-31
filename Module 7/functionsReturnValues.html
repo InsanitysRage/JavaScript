@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions Return Values</title>
+</head>
+
+<body>
+  <script>
+    function getRandomNumber() {
+      let firstNumber = Math.random();
+      let secondNumber = firstNumber * 1000;
+      let finalNumber = Math.round(secondNumber);
+      return finalNumber;
+    };
+    const randomNum = getRandomNumber();
+
+    function add() {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("Random number: " + randomNum);
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    };
+    add();
+
+    function square(num) {
+      return num * num;
+    }
+
+    function add1() {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("5 squared is: " + square(5));
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    };
+    add1();
+
+    function printPositive(num) {
+      if (num < 0) {
+        return;
+      }
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode(`Positive number: ${num}`);
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }
+
+    printPositive(5);
+    printPositive(-3);
+
+    function findPositiveFirst(numbers) {
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 0) {
+          return numbers[i];
+        }
+      }
+      return null;
+    }
+
+    function add2() {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode(findPositiveFirst([-2, -1, 0, 3, 4]));
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }
+    add2();
+
+    function add3() {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode(findPositiveFirst([-3, -2, -1]));
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }
+    add3();
+  </script>
+</body>
+
+</html>

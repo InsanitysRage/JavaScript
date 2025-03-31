@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operators</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // declare variables
+
+  let secretNumber = 7;
+  let userGuess = 10;
+
+  //use comparison operator
+
+  function checkGuess() {
+    if (userGuess == secretNumber) {
+      console.log("Congratulations! you guessed the correct number.");
+    } else if (userGuess < secretNumber) {
+      console.log("Your guess is too low. Try again!");
+    } else {
+      console.log("Your guess is too high, try again!");
+    };
+  };
+
+  checkGuess();
+
+  // == is a loose equality comparison and will check between different data types.
+  // === is a strict equality operator, which means will also check if the values are the same data type.
+
+  // != is a loose inequality comparison,
+  // !== is a strict inequality operator.
+
+  /* 
+  
+  Relational Operators
+  
+  < less than
+  > more than
+  <= less than or equal to
+  >= more than or equal to
+  
+  ! is the logical "not" to operators, so "!=" is "is not equal to"
+  
+  && adds a logical "and" to the operator eg "userGuess < 20 && userGuess > 0" 
+  
+  || is the logical "or" to the operator eg "userGuess >10 || userGuess <10"
+  
+  */
+</script>
+
+</html>

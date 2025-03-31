@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adding Elements</title>
+</head>
+
+<body>
+  <script>
+    window.onload = addParagraph();
+
+
+    function addParagraph() {
+      //create a new p element
+      const newSection = document.createElement("p");
+
+      //and give it some content
+      const newContent = document.createTextNode("Hello There");
+
+      //add the text nore to the newly created section
+      newSection.appendChild(newContent);
+
+      //add the newly created element and its content into the DOM
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }
+
+    document.addEventListener("DOMContentLoaded", addElement);
+
+    function addElement() {
+      //create a new section element
+      const newSection = document.createElement("section");
+
+      //add a class to the new section
+      newSection.classList.add("chapter-section");
+
+      //create a new paragraph element
+      const newParagraph = document.createElement("p");
+
+      //create the text content for the paragraph
+      const newContent = document.createTextNode("This is a new paragraph section.");
+
+      //add the text content to the paragraph
+      newParagraph.appendChild(newContent);
+
+      //add the paragraph to the section
+      newSection.appendChild(newParagraph);
+
+      //find the existing section element
+      const existingSection = document.querySelector("script");
+
+      //insert the new section after the existing section
+      existingSection.insertAdjacentElement("afterend", newSection);
+    };
+  </script>
+</body>
+
+</html>

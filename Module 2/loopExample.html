@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Example</title>
+
+</head>
+
+<body>
+  <div id="book-list"></div>
+  <script>
+    //Loop Example 1
+
+    const library = [
+      "Eragon",
+      "Eldest",
+      "Brisingr",
+      "Inheritance",
+      "Murtagh"
+    ];
+
+    let text = "";
+
+    for (let i = 0; i < library.length; i++) {
+      text = text + library[i] + "<br>";
+    };
+
+
+    document.getElementById("book-list").innerHTML = text;
+  </script>
+</body>
+
+</html>

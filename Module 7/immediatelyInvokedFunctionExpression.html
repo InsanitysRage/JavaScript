@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immediately Invoked Function Expressions (IIFe)</title>
+</head>
+
+<body>
+  <script>
+    (function () {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("Hello!");
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    })();
+  </script>
+</body>
+
+</html>

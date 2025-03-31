@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  //Example One
+  let person = {
+    name: "Aaron",
+    age: 32,
+    greet: function () {
+      return ("Hello my name is " + this.name + " and I am " + this.age + " years old.");
+    },
+  };
+  console.log(person.greet());
+
+  let pet = {
+    name: "Storm",
+    age: 3,
+    greet: function () {
+      return ("My pet is called " + this.name + " and she is " + this.age + " years old");
+    },
+  };
+
+  console.log(pet.greet());
+
+  //Example Two
+
+  let rectangle = {
+    width: 10,
+    height: 5,
+    resize: function (newWidth, newHeight) {
+      this.width = newWidth;
+      this.height = newHeight;
+    },
+  };
+
+  console.log("Before resizing: ", rectangle.width, rectangle.height);
+  rectangle.resize(20, 10);
+  console.log("After resizing: ", rectangle.width, rectangle.height);
+
+  //Example Three
+
+  let obj = {
+    property: false,
+    method: function (value) {
+      this.property = value;
+      return "Property value updated.";
+    },
+  }
+
+  console.log(obj.method(true));
+  console.log(obj.property);
+</script>
+
+</html>

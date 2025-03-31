@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding Elements in the DOM</title>
+</head>
+
+<body>
+  <h1>Un-Edited Heading</h1>
+  <button>Un-Edited Button</button>
+  <div id="chaptersection">
+    <h2>Chapter Section</h2>
+    <p id="para1">This is a random paragraph</p>
+  </div>
+</body>
+<script>
+  const heading = document.querySelector("h1");
+  heading.textContent = "Edited Heading";
+
+  const button = document.querySelector("button");
+  button.textContent = "Edited Button";
+  button.style.backgroundColor = "e6e6e6";
+  button.style.padding = "10px";
+  button.style.borderRadius = "5px";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const chapterSection = document.getElementById("chaptersection");
+    chapterSection.style.backgroundColor = "gold";
+    chapterSection.style.padding = "20px";
+    chapterSection.style.color = "#623d3d";
+
+    const paragraph = document.getElementById("para1");
+    paragraph.style.color = "#9b3c3c";
+    paragraph.style.fontWeight = "bold";
+  });
+
+
+</script>
+
+</html>

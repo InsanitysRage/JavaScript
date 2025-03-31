@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Various Examples</title>
+  <script></script>
+</head>
+
+<body>
+  <h1 id="title">Original Title</h1>
+  <button onclick="changeTitle()">Change</button>
+  <p id="adultContent" ; style="display: none" ;>
+    Welcome to the Adult Section!
+  </p>
+  <p id="minorContent" ; style="display: none" ;>
+    Welcome to the Minor Section!
+  </p>
+  <script>
+    if (myAge >= 18) {
+      document.getElementById("adultContent").style.display = "block";
+    } else {
+      document.getElementById("minorContent").style.display = "block";
+    };
+
+    //Alert Example.
+
+    window.onload = function () {
+      console.log("Web Page Loaded");
+      alert("This is an Alert");
+      console.log("Alert Sent");
+    };
+
+    //Change Content Example.
+
+    function changeTitle() {
+      console.log("Change Title Button Clicked");
+      var title = document.getElementById("title");
+      console.log("Title Element Targeted");
+      title.textContent = "New Title!";
+      console.log("Title Changed");
+    };
+
+    //Variable Example 1
+
+    var myAge = 32;
+
+    function variableExampleOne() {
+      console.log("Variable Example One Triggered");
+      console.log("My Age = " + myAge);
+      if (myAge >= 18) {
+        console.log("You are an adult");
+      } else {
+        console.log("You are a minor");
+      };
+    };
+
+    variableExampleOne();
+
+    // Variable Example 2
+
+    var x = 10;
+    var y = 20;
+    var result = x + y;
+
+
+    function variableExampleTwo() {
+      console.log("Variable Example Two Triggered")
+      console.log("x=" + x);
+      console.log("y=" + y);
+      console.log("x+y=" + result);
+    };
+
+    variableExampleTwo();
+
+    //Variable example 3
+
+    var firstName = "Aaron";
+    var lastName = "Wattam";
+    var fullName = firstName + " " + lastName;
+
+    function variableExampleThree() {
+      console.log("Variable Example Three Triggered")
+      console.log("First Name = " + firstName);
+      console.log("Last Name = " + lastName);
+      console.log("Full Name = " + fullName);
+    };
+
+    variableExampleThree();
+
+    //Variable Example 4
+
+    var localVar = 10;
+
+    function variableExampleFour() {
+      console.log("Variable Example Four Triggered")
+      console.log("localVar = " + localVar);
+    }
+
+    variableExampleFour();
+
+    //Conditional Statement Example 1
+
+    var temperature = 25;
+
+    function conditionalStatementExampleOne() {
+      console.log("Conditional Statement Example One Triggered");
+      if (temperature >= 30) {
+        console.log("It's a hot day!");
+      } else if (temperature >= 26 && temperature < 30) {
+        console.log("It's a pleasant day.");
+      } else if (temperature == 25) {
+        console.log("It's a perfect day.");
+      } else if (temperature >= 20 && temperature < 25) {
+        console.log("It's a pleasant day.");
+      } else {
+        console.log("It's a cold day.");
+      };
+    };
+
+    conditionalStatementExampleOne();
+
+    //Conditional Statement Example 2
+
+    function conditionalStatementExampleTwo() {
+      console.log("Conditional Statement Example Two Triggered");
+      if (myAge >= 18) {
+        console.log("Displaying Adult Content");
+      } else {
+        console.log("Displaying Minor Content");
+      };
+    };
+
+    conditionalStatementExampleTwo()
+
+    //Conditional Statement Example 3
+
+    var vehicleSpeed = 65;
+    var speedLimit = 70;
+    var fineAmount = 0;
+
+    function conditionalStatementExampleThree() {
+      console.log("Conditional Statement Example Three Triggered")
+      if (vehicleSpeed > speedLimit) {
+        var speedDifference = vehicleSpeed - speedLimit;
+        fineAmount = Math.ceil(speedDifference / 5) * 50;
+        console.log("You was driving at " + vehicleSpeed + "mph, exceeding the speed limit of " + speedLimit + "mph by " + speedDifference + "mph.");
+        console.log("You have been fined £" + fineAmount + ".");
+      } else {
+        console.log("You was driving within the speed limit of " + speedLimit + "mph.");
+      };
+    }
+
+    conditionalStatementExampleThree();
+
+    //Conditional Statement Example 4
+
+    var hasPaid = true;
+
+    function conditionalStatementExampleFour() {
+      console.log("Conditional Statement Example Four Triggered")
+      if (hasPaid) {
+        console.log("Your ticket has been paid!");
+      } else {
+        console.log("You have not paid yet!");
+      };
+    };
+
+    conditionalStatementExampleFour();
+
+    //Conditional Statement Example 5
+
+    let favouriteCar = "ford";
+
+    function conditionalStatementExampleFive() {
+      console.log("Conditional Statement Example Five Triggered")
+      switch (favouriteCar) {
+        case "ford":
+          console.log("Your favourite car is Ford");
+          break;
+        case "mercedes":
+          console.log("Your favourite car is Mercedes");
+          break;
+        case "toyota":
+          console.log("Your favourite car is Toyota");
+          break;
+        case "vw":
+          console.log("Your favourite car is VW");
+          break;
+        case "hyundai":
+          console.log("Your favourite car is Hyundai");
+          break;
+        default:
+          console.log("No known car specified");
+          break;
+      }
+    }
+
+    conditionalStatementExampleFive();
+
+    //Array Example 1
+
+    let products = ["shoes", "shirts", "trousers", "jewellery", "socks"];
+
+
+  </script>
+</body>
+
+</html>

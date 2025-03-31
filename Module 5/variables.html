@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // Using "var" to declare variables
+
+  var number = 5;
+  console.log(number);
+  var number = 7;
+  console.log(number);
+
+  //"var" is a globally scoped variable. This means the variable can be used anywhere in the code
+
+  function add() {
+    answer = number + 6;
+    console.log(answer)
+  };
+
+  add();
+
+  var count = 0;
+
+  function increment() {
+    var count = 1;
+    count++;
+    console.log("Inside the function: ", count);
+  }
+
+  increment();
+
+  console.log("Outside of the function: ", count);
+
+  // Using "let" to declare variables, the "let" declaration declares re-assignable, block-scoped local variables, optionally initialising each to a value.
+
+  function example() {
+    for (let i = 0; i < 10; i++) {
+      setTimeout(function () {
+        console.log(i);
+      }, 1000);
+    }
+  }
+
+  example();
+
+  // Using "const" to declare variables. A const value cannot be changed, however if it is an object it's properties can be changed added or removed.
+
+  if (true) {
+    const x = 10;
+    console.log(x);
+  }
+
+  const person = {
+    name: "Aaron",
+    age: 30,
+  };
+
+  person.age = 32; // modifying a property
+  person.city = "New York"; // adding a property
+  delete person.name; // removing a property
+
+  console.log(person);
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Parameters & Arguments</title>
+</head>
+
+<body>
+  <script>
+    function greetUser(name) { // The "name" here is the parameter
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("Hello, " + name + "!");
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    };
+
+    greetUser("Aaron"); // The "Aaron" here is the argument
+
+    // This is using the timout function, to invoke a function after a set number of milliseconds
+
+    setTimeout(function () {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("Are you still there?");
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }, 10000);
+
+  </script>
+</body>
+
+</html>

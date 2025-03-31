@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Literals</title>
+</head>
+
+<body>
+  <script>
+    //User Class
+
+    class User {
+      constructor(name, age, email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+      }
+    }
+
+    const userObject = new User("Aaron", 32, "aaron@hotmail.com");
+    console.log(userObject);
+
+    const newHTML = `
+  <h1>Hello ${userObject.name}</h1>
+  <h2>Your age is ${userObject.age}</h2>
+  <h3>Your email address is ${userObject.email}</h3>
+`;
+
+    document.body.innerHTML = newHTML;
+  </script>
+</body>
+
+</html>

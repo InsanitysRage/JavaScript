@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+
+<body>
+  <script>
+    greet = name => "Hello, " + name + "!";
+
+    const newSection = document.createElement("p");
+    const newContent = document.createTextNode(greet("Aaron"));
+    newSection.appendChild(newContent);
+    const currentSection = document.querySelector("script");
+    document.body.insertBefore(newSection, currentSection);
+  </script>
+</body>
+
+</html>

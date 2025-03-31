@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  const books = [
+    "Eragon", // Index position 0
+    "Eldest", // Index position 1
+    "Brisingr", // Index position 2
+    "Inheritance", // Index position 3
+    "Murtagh" // Index position 4
+  ];
+  console.log("The starting Array is: ");
+  console.log(books);
+
+  books.push("The Hobbit");
+  console.log("A new book has been added");
+  console.log("The new Array is: ");
+  console.log(books);
+
+  books.push("The Fellowship of the Ring", "The Two Towers", "The Return of the King");
+  console.log("Three new books have been added to the Array");
+  console.log("The new Array is: ");
+  console.log(books);
+
+  books.pop();
+  console.log("The last book has been removed from the Array");
+  console.log("The new Array is: ");
+  console.log(books);
+
+  books.splice(2, 3, "The King and the Coward", "The Eighth");
+  console.log("Three Books removed from the list, starting from position 2, and two new books added");
+  console.log("The new Array is: ");
+  console.log(books);
+
+  books.splice(2, 0, "Brisingr", "Inheritance", "Murtagh");
+  console.log("The three removed books now readded back in to their position");
+  console.log("The new Array is: ");
+  console.log(books);
+
+  books.shift();
+  console.log("The first item in the Array has been removed");
+  console.log("The new Array is: ");
+  console.log(books);
+
+  books.unshift("The Lord of the Flies", "Eragon");
+  console.log("Two books have been added to the beghinning of the Array");
+  console.log("The new Array is: ");
+  console.log(books);
+
+  console.log("Another way to display the list of items in the Array: ")
+  console.log(books.join(", "));
+
+  console.log("The position of the Hobbit in the Array index is: " + books.indexOf("The Hobbit"));
+</script>
+
+</html>

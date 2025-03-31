@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deeper look at functions</title>
+</head>
+
+<body>
+  <script>
+    // how a function is layed out
+
+    /*
+    function funName(parameters) {
+      statements;
+    };
+    
+    funName();
+    */
+
+    //example of a simple greet function
+
+    function greet(name) {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("Hello, " + name + "!")
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }
+
+    greet("John"); // Output: Hello, John!
+    greet("Alice"); // Output: Hello, Alice!
+
+    //Function
+
+    function sayHello() {
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("Hello!")
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }
+
+    //Object with a method
+
+    const person = {
+      name: "John",
+      greet: function () {
+        const newSection = document.createElement("p");
+        const newContent = document.createTextNode("Hello, my name is " + this.name + "!");
+        newSection.appendChild(newContent);
+        const currentSection = document.querySelector("script");
+        document.body.insertBefore(newSection, currentSection);
+      }
+    }
+
+    sayHello();
+    person.greet();
+
+    //Calculation Example
+
+    function calculateRectangleArea(length, width) {
+      return length * width;
+    }
+
+    const area1 = calculateRectangleArea(5, 3);
+    console.log("Area 1: " + area1);
+
+    const area2 = calculateRectangleArea(7, 4);
+    console.log("Area 2: " + area2);
+
+    //Date Function
+    function addDate() {
+
+      function formatDate(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        return `${day}-${month}-${year}`;
+      }
+      const today = new Date();
+      const formattedDate = formatDate(today);
+
+
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode("Today's Date: " + formattedDate);
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+    }
+
+    addDate();
+
+  </script>
+</body>
+
+
+</html>

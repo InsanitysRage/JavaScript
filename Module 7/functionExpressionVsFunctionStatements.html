@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Expression vs Function Statement-</title>
+</head>
+
+<body>
+  <script>
+    /* Input -> Process -> Output */
+
+    let age = 25;
+    let isAdult;
+
+    if (age >= 18) {
+      isAdult = true;
+    } else {
+      isAdult = false;
+    };
+
+    console.log(isAdult);
+
+    let a = 3;
+    let b = 2;
+
+    // Arithmatic Expressions
+
+    let sum = a + b; // a and b are used as expressions
+    let difference = a - b; // a and b are used as expressions
+
+    // Logical Expressions
+    let isGreater = a > b; // a and b are used as expressions
+    let isEqual = a === b; // a and be are used as expressions
+
+    //Function call expressions
+    let max = Math.max(a, b); // a and b are used as expressions (arguments)
+
+    console.log(sum); // Output: 5
+    console.log(difference); // Output: 1
+    console.log(isGreater); // Output: true
+    console.log(isEqual) // Output: false
+    console.log(max); // Output: 3
+
+    // Errors will come from assignments being declared after the expressions
+
+    /* console.log(x); // Output: undefined
+    var x = 10; // Declaration is hoisted, but the assignment is not
+    
+    console.log(y); // Output: ReferenceError: y is not defnied
+    let y = 20; // Both declaration and assignment happen during execution
+    
+    function example() {
+      console.log(z); // Output: undefined
+      var z = 30; // Function-scoped seclaration is hoisted
+    }
+    example();
+    
+    console.log(c + d); // Output: ReferenceError: c is not defined
+    const c = 40, d = 50; // Declarations are hoisted, but assignments are not */
+
+    // A Function is hoisted, so it does not matter if the function is called before it is declared
+
+    sayHello(); // Outputs: "Hello World!"
+
+    function sayHello() {
+      console.log("Hello World!");
+    };
+
+    let square = (x) => x * x;
+    console.log(square(5));
+
+    let greetUser = (name) => {
+      let greeting = `Hello, ${name}!`;
+      console.log(greeting);
+    }
+    greetUser("Alice");
+
+  </script>
+</body>
+
+</html>
