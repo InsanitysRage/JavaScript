@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Statements</title>
+</head>
+
+<body>
+  <script>
+    function testNum(a) {
+      let result;
+      if (a > 0) {
+        result = 'positive';
+      } else {
+        result = 'NOT Positive';
+      }
+      const newSection = document.createElement("p");
+      const newContent = document.createTextNode(a + " is " + result);
+      newSection.appendChild(newContent);
+      const currentSection = document.querySelector("script");
+      document.body.insertBefore(newSection, currentSection);
+      return result;
+    };
+
+
+    testNum(-5);
+    testNum(6);
+  </script>
+</body>
+
+</html>
